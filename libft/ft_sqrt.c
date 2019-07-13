@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mretha <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/05 20:15:49 by mretha            #+#    #+#             */
+/*   Updated: 2019/05/02 21:18:39 by mretha           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int			ft_sqrt(int nb)
+{
+	int		low;
+	int		high;
+	int		middle;
+	long	test;
+
+	if (nb <= 0)
+		return (0);
+	if (nb == 1)
+		return (1);
+	low = 0;
+	high = 46341;
+	while (low <= high)
+	{
+		middle = (low + high) / 2;
+		test = middle * middle;
+		if (test == (long)nb)
+			return (middle);
+		else if (test > (long)nb)
+			high = middle - 1;
+		else
+			low = middle + 1;
+	}
+	return (0);
+}

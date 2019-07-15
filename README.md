@@ -1,4 +1,4 @@
-# 42_get_next_line
+# 42 get_next_line project (GNL)
 
 EVALUATED BY MOULINETTE **125%**
 
